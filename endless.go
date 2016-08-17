@@ -300,7 +300,7 @@ func (srv *endlessServer) getListener(laddr string) (l net.Listener, err error) 
 			return
 		}
 	} else {
-		l, err = net.Listen("tcp", laddr)
+		l, err = net.Listen("tcp4", laddr)
 		if err != nil {
 			err = fmt.Errorf("net.Listen error: %v", err)
 			return
